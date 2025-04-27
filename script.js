@@ -75,6 +75,37 @@ function filterOptions(allOptions, criteria) {
 }
 
 /**
+ * Filters options based on selected criteria, supporting multiple values
+ * @param {Array} allOptions - All available options
+ * @param {Object} criteria - Object containing filtering criteria
+ * @returns {Array} Filtered options
+ */
+function filterOptionsMulti(allOptions, criteria) {
+    return allOptions.filter(option => {
+        for (const key in criteria) {
+            // Skip if criteria is not set or is set to "any"
+            if (!criteria[key] || criteria[key] === "any") {
+                continue;
+            }
+            
+            // Handle array values in the option
+            if (Array.isArray(option[key])) {
+                // If the option has this key as an array, check if the criteria value is in the array
+                if (!option[key].includes(criteria[key])) {
+                    return false;
+                }
+            } else {
+                // If the option doesn't match the criteria, filter it out
+                if (option[key] !== criteria[key]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    });
+}
+
+/**
  * Initializes the page event listeners
  * This function should be called on each decision page
  */
