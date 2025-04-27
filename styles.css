@@ -79,6 +79,19 @@ header p {
     letter-spacing: -1px;
 }
 
+.coming-soon-badge {
+    display: inline-block;
+    background-color: #ad1457;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    transform: rotate(-5deg);
+    box-shadow: 2px 2px 5px rgba(173, 20, 87, 0.25);
+    border: 1px dashed #fff;
+}
+
 /* Footer Styles */
 footer {
     text-align: center;
