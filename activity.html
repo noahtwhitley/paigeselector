@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Decision Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What Should We Do?</h1>
+            <p>Let's find an activity!</p>
+            <a href="index.html" class="back-btn">Back to Main Menu</a>
+        </header>
+
+        <main>
+            <div class="decision-container">
+                <form id="decision-form">
+                    <div class="question">
+                        <h2>What kind of activity are you looking for?</h2>
+                    </div>
+                    
+                    <div class="options">
+                        <div class="option-group">
+                            <h3>Location</h3>
+                            <select id="location" name="location">
+                                <option value="any">Any</option>
+                                <option value="indoor">Indoor</option>
+                                <option value="outdoor">Outdoor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Group Size</h3>
+                            <select id="groupSize" name="groupSize">
+                                <option value="any">Any</option>
+                                <option value="alone">Just Me</option>
+                                <option value="couple">Just Us Two</option>
+                                <option value="small-group">Small Group (3-5)</option>
+                                <option value="large-group">Large Group (6+)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Activity Level</h3>
+                            <select id="activityLevel" name="activityLevel">
+                                <option value="any">Any</option>
+                                <option value="relaxed">Relaxed</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="active">Active</option>
+                                <option value="very-active">Very Active</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Duration</h3>
+                            <select id="duration" name="duration">
+                                <option value="any">Any</option>
+                                <option value="short">Quick (< 1hr)</option>
+                                <option value="medium">Medium (1-3hrs)</option>
+                                <option value="long">Long (3-6hrs)</option>
+                                <option value="full-day">Full Day</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="submit-container">
+                        <button type="submit" class="option-btn">Make a Decision!</button>
+                        <button type="button" id="reset-button" class="option-btn">Reset</button>
+                    </div>
+                </form>
+                
+                <div class="result-container">
+                    <h2>Your Activity Decision:</h2>
+                    <p id="result"></p>
+                    <p id="result-details"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for you</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="activity.js"></script>
+</body>
+</html>

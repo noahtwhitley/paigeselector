@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Decision Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What Should We Eat?</h1>
+            <p>Let's decide on some food!</p>
+            <a href="index.html" class="back-btn">Back to Main Menu</a>
+        </header>
+
+        <main>
+            <div class="decision-container">
+                <form id="decision-form">
+                    <div class="question">
+                        <h2>What kind of meal are you looking for?</h2>
+                    </div>
+                    
+                    <div class="options">
+                        <div class="option-group">
+                            <h3>Meal Type</h3>
+                            <select id="meal-type" name="meal-type">
+                                <option value="any">Any</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="snack">Snack</option>
+                                <option value="dessert">Dessert</option>
+                                <option value="drink">Drink</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Cuisine</h3>
+                            <select id="cuisine" name="cuisine">
+                                <option value="any">Any</option>
+                                <option value="italian">Italian</option>
+                                <option value="mexican">Mexican</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="japanese">Japanese</option>
+                                <option value="indian">Indian</option>
+                                <option value="american">American</option>
+                                <option value="thai">Thai</option>
+                                <option value="mediterranean">Mediterranean</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Location</h3>
+                            <select id="location" name="location">
+                                <option value="any">Any</option>
+                                <option value="eat-out">Eat Out</option>
+                                <option value="takeout">Takeout</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="cook">Cook at Home</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Price Range</h3>
+                            <select id="price" name="price">
+                                <option value="any">Any</option>
+                                <option value="budget">Budget ($)</option>
+                                <option value="moderate">Moderate ($$)</option>
+                                <option value="expensive">Expensive ($$$)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="submit-container">
+                        <button type="submit" class="option-btn">Make a Decision!</button>
+                        <button type="button" id="reset-button" class="option-btn">Reset</button>
+                    </div>
+                </form>
+                
+                <div class="result-container">
+                    <h2>Your Food Decision:</h2>
+                    <p id="result"></p>
+                    <p id="result-details"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for you</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="food.js"></script>
+</body>
+</html>

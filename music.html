@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Decision Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What Should We Listen To?</h1>
+            <p>Let's find some music!</p>
+            <a href="index.html" class="back-btn">Back to Main Menu</a>
+        </header>
+
+        <main>
+            <div class="decision-container">
+                <form id="decision-form">
+                    <div class="question">
+                        <h2>What kind of music are you in the mood for?</h2>
+                    </div>
+                    
+                    <div class="options">
+                        <div class="option-group">
+                            <h3>Genre</h3>
+                            <select id="genre" name="genre">
+                                <option value="any">Any</option>
+                                <option value="pop">Pop</option>
+                                <option value="rock">Rock</option>
+                                <option value="hip-hop">Hip Hop</option>
+                                <option value="r-and-b">R&B</option>
+                                <option value="country">Country</option>
+                                <option value="electronic">Electronic</option>
+                                <option value="classical">Classical</option>
+                                <option value="jazz">Jazz</option>
+                                <option value="indie">Indie</option>
+                                <option value="alternative">Alternative</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Mood</h3>
+                            <select id="mood" name="mood">
+                                <option value="any">Any</option>
+                                <option value="upbeat">Upbeat</option>
+                                <option value="relaxed">Relaxed</option>
+                                <option value="emotional">Emotional</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="energetic">Energetic</option>
+                                <option value="melancholic">Melancholic</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Era</h3>
+                            <select id="era" name="era">
+                                <option value="any">Any</option>
+                                <option value="60s-70s">60s-70s</option>
+                                <option value="80s-90s">80s-90s</option>
+                                <option value="2000s-2010s">2000s-2010s</option>
+                                <option value="contemporary">Contemporary</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Context</h3>
+                            <select id="context" name="context">
+                                <option value="any">Any</option>
+                                <option value="background">Background</option>
+                                <option value="focus">Focus</option>
+                                <option value="party">Party</option>
+                                <option value="workout">Workout</option>
+                                <option value="road-trip">Road Trip</option>
+                                <option value="date-night">Date Night</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="submit-container">
+                        <button type="submit" class="option-btn">Make a Decision!</button>
+                        <button type="button" id="reset-button" class="option-btn">Reset</button>
+                    </div>
+                </form>
+                
+                <div class="result-container">
+                    <h2>Your Music Decision:</h2>
+                    <p id="result"></p>
+                    <p id="result-details"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for you</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+</body>
+</html>
